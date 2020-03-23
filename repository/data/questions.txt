@@ -1,0 +1,5 @@
+Do you live outside of UK?
+Are you underaged?
+Are you unemployed?
+Have you ever been in prison?
+Have you previously participated in an online survey?
