@@ -1,4 +1,4 @@
-from repository import Repository
+from repository.repository import Repository
 
 
 class Chances:
@@ -46,7 +46,7 @@ class Domain:
     @staticmethod
     def update_data(index, data):
         categories[index].all += 1
-        if data[index] == "F" or data[index] == "U":
+        if data[index] != "T":
             categories[index].correct += 1
         try:
             categories[index].chance = categories[index].correct / categories[index].all

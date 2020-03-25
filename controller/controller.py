@@ -1,4 +1,4 @@
-from domain import Domain
+import sys
 
 
 def poll():
@@ -34,3 +34,9 @@ def run():
     poll()
 
 
+if __name__ == "__main__":
+    path = "/".join(__file__.split("/")[:-2])
+    if path not in sys.path:
+        sys.path.append(path)
+    from domain.domain import Domain
+    run()
