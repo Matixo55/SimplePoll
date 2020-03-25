@@ -1,14 +1,11 @@
-__all__ = ["run"]
 from domain import Domain
 
 
 def poll():
     print("Answer with yes/no or skip question by typing skip")
     user, questions = Domain.prepare_questions()
-    ask_questions(user, questions)
-    answers = []
+    answers = ask_questions(user, questions)
     print("Thank You for participating")
-    print(answers)
     Domain.save_answers(answers)
 
 
@@ -29,6 +26,7 @@ def ask_questions(user, questions):
                     user.eligible = False
                 answers.append(answer)
                 break
+    return answers
 
 
 def run():

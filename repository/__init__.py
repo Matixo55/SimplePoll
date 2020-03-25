@@ -1,6 +1,3 @@
-__all__ = ["Repository"]
-
-
 class Repository:
     import os.path
     global surveys, question_file

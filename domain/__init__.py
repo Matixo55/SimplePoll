@@ -1,5 +1,3 @@
-__all__ = ["Domain"]
-
 from repository import Repository
 
 
@@ -38,8 +36,12 @@ class Domain:
                 data_updater(x, line)
 
     @staticmethod
-    def save_answers():
+    def save_answers(answers):
         process_answer = {"yes": "F", "no": "T", "skip": "U"}
+        answers_processed = []
+        for x in answers:
+            answers_processed.append(process_answer[x])
+        Repository.write_to_database(answers_processed)
 
     @staticmethod
     def update_data(index, data):
